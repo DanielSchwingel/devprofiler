@@ -8,6 +8,7 @@ import login from '../../assets/images/login.png'
 import github from '../../assets/images/github.png'
 
 function Login() {
+
    return (
       <View style={styles.container}>
          <Image source={login}/>
