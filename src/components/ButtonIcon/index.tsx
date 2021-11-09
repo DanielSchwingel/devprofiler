@@ -8,11 +8,12 @@ interface IButtonIconProps extends TouchableOpacityProps {
    description: string
 } 
 
-function ButtonIcon({ icon, description }: IButtonIconProps) {
+function ButtonIcon({ icon, description, ...rest }: IButtonIconProps) {
    return (
       <TouchableOpacity 
          style={styles.container}
          activeOpacity={0.7}
+         {...rest}
       >
          <View style={styles.iconWrapper}>
             <Image source={icon}/>

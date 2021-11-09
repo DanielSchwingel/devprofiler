@@ -1,17 +1,17 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { createStackNavigator } from '@react-navigation/stack'
 
 import { Login } from './src/screens/Login'
 import { Home } from './src/screens/Home'
 
-const Stack = createNativeStackNavigator()
+const Stack = createStackNavigator()
 
 function Routes() {
    return (
       <NavigationContainer>
          <Stack.Navigator 
-            initialRouteName='home'
+            initialRouteName='login'
             screenOptions={{
                headerShown: false
             }}
