@@ -5,7 +5,12 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { Login } from './src/screens/Login'
 import { Home } from './src/screens/Home'
 
-const Stack = createStackNavigator()
+export type IRoutesList = {
+   home: undefined
+   login: undefined
+}
+
+const Stack = createStackNavigator<IRoutesList>()
 
 function Routes() {
    return (

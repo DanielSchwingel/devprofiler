@@ -1,19 +1,22 @@
 import React from 'react'
 import { View, Image, Text } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
+import { StackNavigationProp } from '@react-navigation/stack'
 
 import { ButtonIcon } from '../../components/ButtonIcon'
+import { IRoutesList } from '../../../routes'
 
 import { styles } from './styles'
 import login from '../../assets/images/login.png'
 import github from '../../assets/images/github.png'
 
+type LoginRouteProp = StackNavigationProp<IRoutesList, 'login'>;
 
 function Login() {
-   const navigation = useNavigation()
+   
+   const navigation = useNavigation<LoginRouteProp>()
 
    function handleSigIn(){
-      console.log('teste')
       navigation.navigate('home')
    }
 
