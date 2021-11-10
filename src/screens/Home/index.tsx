@@ -1,12 +1,13 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import { Avatar } from '../../components/Avatar'
 
 import { styles } from './styles'
 
 function Home() {
    return (
       <View style={styles.container}>
-         <Text>Teste</Text>
+         <Avatar/>
       </View>
    )
 }
